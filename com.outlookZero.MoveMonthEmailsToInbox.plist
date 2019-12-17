@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Disabled</key>
+        <false/>
+        <key>Label</key>
+        <string>com.outlookZero.MoveMonthEmailsToInbox</string>
+        <key>Program</key>
+        <string>/usr/bin/osascript</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>osascript</string>
+                <string>./OutlookZero/MoveEmailTomorrow.applescript</string>
+		            <string>Next Month</string>
+        </array>
+        <key>RunAtLoad</key>
+        <false/>
+        <key>StartCalendarInterval</key>
+        <array>
+            <dict>
+                <key>Day</key>
+                <integer>1</integer>
+                <key>Hour</key>
+                <integer>5</integer>
+            </dict>
+        </array>
+</dict>
+</plist>
+<!-- put it into the folder ~/Library/LaunchAgents (where ~ is your Home Directory) -->
+<!-- And then, once the file is in place, you should enter this command in Terminal: -->
+<!-- launchctl load ~/Library/LaunchAgents/com.tjluoma.SuprSetr.plist -->
